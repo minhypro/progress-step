@@ -5,6 +5,9 @@ const three = document.getElementById('3')
 const four = document.getElementById('4')
 const circles = document.querySelectorAll('.circle')
 const bg = document.querySelector('body')
+const search = document.querySelector('.search')
+const btn = document.querySelector('.btn')
+const input = document.querySelector('.input')
 
 let currentActive = 1
 
@@ -78,3 +81,8 @@ function update() {
     //     next.disabled = false
     // }
 }
+
+btn.addEventListener('click', () => {
+    search.classList.toggle('active')
+    input.focus()
+})

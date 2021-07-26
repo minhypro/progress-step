@@ -21,7 +21,8 @@ body {
     background-repeat: no-repeat;
     font-family: 'Noto Sans', sans-serif;
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     height: 100vh;
     overflow: hidden;
@@ -51,7 +52,8 @@ body.bg-four {
 .container {
     text-align: center;
     position: relative;
-    margin: 0 0 10vh 0;
+    margin: 45vh 0 10vh 0;
+    
 }
 
 .progress-container {
@@ -126,15 +128,57 @@ body.bg-four {
     transform: scale(1.5);
 }
 
-/* .circle:focus {
-    outline: 0;
+.circle:focus {
+    outline: none;
 }
 
-.circle:disabled {
+/* .circle:disabled {
     background-color: var(--line-empty);
     cursor: not-allowed;
 } */
 
 .container.one {
     background-image: url('https://images.unsplash.com/photo-1552083375-1447ce886485?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80');
+}
+
+.search {
+    position: relative;
+    height: 50px;   
+}
+
+.search .input {
+    background-color: #fff;
+    border: 0;
+    font-size: 20px;
+    padding: 15px;
+    height: 50px;
+    width: 50px;
+    transition: width 1s ease;
+}
+
+.search .btn {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    top: 0;
+    left: 0;
+    border: 0;
+    font-size: 24px;
+    transition: transform 1s ease;
+}
+
+.btn:focus, .input:focus {
+    outline: none;
+}
+
+.search.active .input {
+    width: 200px;
+}
+
+.search.active .btn {
+    transform: translateX(198px);
+}
+
+.btn:hover {
+    cursor: pointer;
 }
