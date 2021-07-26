@@ -157,6 +157,7 @@ body.bg-four {
 }
 
 .search .btn {
+    background-color: #fff;
     position: absolute;
     height: 50px;
     width: 50px;
